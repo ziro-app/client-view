@@ -8,6 +8,7 @@ const fetchFromSheet = async (get, cancelTokenSource) => {
 	if (values.length === 0)
 		await Promise.reject('Error at fetchFromSheet. values.length === 0')
 	const resellers = values
+	console.log(resellers)
 	return { resellers }
 }
 

@@ -2,6 +2,7 @@ const WebpackPwaManifest = require('webpack-pwa-manifest')
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = (env, { mode }) => {
 	const config = {
