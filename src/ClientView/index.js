@@ -28,3 +28,4 @@ export default class ClientView extends Component {
 	componentDidMount = () => this.fetchInitialData()
 	componentWillUnmount = () => this.cancelTokenSource.cancel()
 	render = () => this.renderForm(this.state.uiState)
+}

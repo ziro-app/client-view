@@ -1,7 +1,10 @@
 import React from 'react'
 import ErrorBoundary from '../ErrorBoundary/index'
-import Header from '../Header/index'
+import ClientView from '../ClientView/index'
 
-const App = () => <ErrorBoundary><Header title='Dados Clientes'>Hi</Header></ErrorBoundary>
+const App = () =>
+	<ErrorBoundary>
+		<ClientView />
+	</ErrorBoundary>
 
 export default App
