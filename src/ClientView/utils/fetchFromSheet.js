@@ -7,8 +7,7 @@ const fetchFromSheet = async (get, cancelTokenSource) => {
 		await Promise.reject('Error at fetchFromSheet. values is undefined')
 	if (values.length === 0)
 		await Promise.reject('Error at fetchFromSheet. values.length === 0')
-	const resellers = values
-	console.log(resellers)
+	const resellers = values.map(value => value[0]).slice(1).sort()
 	return { resellers }
 }
 
