@@ -1,5 +1,5 @@
 import React from 'react'
-// import Form from '../Form/index'
+import View from '../View/index'
 import Header from '../../Header/index'
 import Spinner from '../../Spinner/index'
 import ErrorOnFetch from '../../ErrorOnFetch/index'
@@ -7,7 +7,7 @@ import ErrorOnFetch from '../../ErrorOnFetch/index'
 const renderForm = that => uiState => {
 	const componentToRender = {
 		default:
-			<div>Hi</div>,
+			<View state={that.state} updateDropdown={that.updateDropdown} />,
 		fetching:
 			<Spinner size={'8rem'} />,
 		error_fetching:
