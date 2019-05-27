@@ -14,7 +14,7 @@ const renderForm = that => uiState => {
 			<ErrorOnFetch />
 	}
 	const ui = uiState !== 'fetching' && uiState !== 'error_fetching' ? 'default' : uiState
-	return <Header title='Dados Clientes'>{componentToRender[ui]}</Header>
+	return <Header title='Dados do Cliente'>{componentToRender[ui]}</Header>
 }
 
 export default renderForm
