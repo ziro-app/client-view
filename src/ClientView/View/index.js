@@ -12,4 +12,9 @@ const View = ({ state: { resellers, reseller }, updateDropdown }) => (
 	/>
 )
 
+View.propTypes = {
+	state: PropTypes.object.isRequired,
+	updateDropdown: PropTypes.func.isRequired
+}
+
 export default View
