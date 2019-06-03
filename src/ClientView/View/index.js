@@ -3,6 +3,23 @@ import PropTypes from 'prop-types'
 import Dropdown from '@ziro/dropdown'
 import { container, row, label, data } from './styles'
 
+const clientData = [
+	{ value: 'Rubia' , name: 'Assessor' },
+	{ value: 'Maria', name: 'Nome' },
+	{ value: 'São Paulo - SP' , name: 'Localidade' },
+	{ value: 'R Lubavitch, 71' , name: 'Endereço' },
+	{ value: 'Centro' , name: 'Bairro' },
+	{ value: '01122-010' , name: 'CEP' },
+	{ value: '13.026.117/0001-99' , name: 'CNPJ' },
+	{ value: '12.3456.7-8' , name: 'IE' },
+	{ value: '011.445.667-09' , name: 'CPF' },
+	{ value: '1305678-9' , name: 'RG' },
+	{ value: 'f@gmail.com' , name: 'Email' },
+	{ value: 'Eucatur' , name: 'Transporte' },
+	{ value: '18/dez/18' , name: 'Última Compra' },
+	{ value: ['Karmani','Absolutti','Secia','Doce Flor','Donna Ritz'] , name: 'Top Marcas' }
+]
+
 const View = ({ state: { resellers, reseller }, updateDropdown }) => (
 	<Fragment>
 		<Dropdown
@@ -13,7 +30,7 @@ const View = ({ state: { resellers, reseller }, updateDropdown }) => (
 			updateParent={updateDropdown}
 		/>
 		<div style={container}>
-			{[{ value: 'test1', name: 'NAME1' },{ value: 'test2', name: 'NAME2' }].map( ({ value, name }) =>
+			{clientData.map( ({ value, name }) =>
 				<div style={row} key={name}>
 					<span style={label}>{name}</span>
 					<span style={data}>{value}</span>

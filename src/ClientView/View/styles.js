@@ -4,6 +4,7 @@ container = {
 	display: 'grid',
 	gridRowGap: '7px',
 	width: '100%',
+	marginTop: '30px',
 	textAlign: 'left',
 	fontSize: '1.5rem',
 	color: 'rgba(48, 62, 77, 0.8)'
