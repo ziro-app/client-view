@@ -13,10 +13,9 @@ export default class ClientView extends Component {
 		uiState: initialUiState,
 		/* dropdown data */
 		resellers: [],
+		clientData: [],
 		/* user inputs */
-		reseller: '',
-		/* error messages */
-		error_reseller: ''
+		reseller: ''
 	}
 	/*-- methods --*/
 	cancelTokenSource = CancelToken.source()

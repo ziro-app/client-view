@@ -8,7 +8,8 @@ const fetchFromSheet = async (get, cancelTokenSource) => {
 	if (values.length === 0)
 		await Promise.reject('Error at fetchFromSheet. values.length === 0')
 	const resellers = values.map(value => value[0]).slice(1).sort()
-	return { resellers }
+	const clientData = values.slice(1)
+	return { resellers, clientData }
 }
 
 export default fetchFromSheet
