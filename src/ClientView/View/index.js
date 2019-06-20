@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Dropdown from '@ziro/dropdown'
-import filterData from '../utils/filterData'
 import { container, row, label, data } from './styles'
 
 // const clientData = [
@@ -31,7 +30,7 @@ const View = ({ state: { resellers, reseller, clientData }, updateDropdown }) =>
 			updateParent={updateDropdown}
 		/>
 		<div style={container}>
-			{filterData(reseller, clientData).map( ({ value, name }) =>
+			{clientData.map( ({ value, name }) =>
 				<div style={row} key={name}>
 					<span style={label}>{name}</span>
 					<span style={data}>{value}</span>
