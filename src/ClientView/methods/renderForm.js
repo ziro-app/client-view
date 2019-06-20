@@ -4,11 +4,10 @@ import Header from '../../Header/index'
 import Spinner from '../../Spinner/index'
 import ErrorOnFetch from '../../ErrorOnFetch/index'
 
-const RenderForm = ({ uiState, resellers, clientData, reseller, updateDropdown }) => {
-	const state = { uiState, resellers, clientData, reseller }
+const renderForm = that => uiState => {
 	const componentToRender = {
 		default:
-			<View state={state} updateDropdown={updateDropdown} />,
+			<View state={that.state} updateDropdown={that.updateDropdown} />,
 		fetching:
 			<Spinner size={'8rem'} />,
 		error_fetching:
@@ -18,4 +17,4 @@ const RenderForm = ({ uiState, resellers, clientData, reseller, updateDropdown }
 	return <Header title='Dados do Cliente'>{componentToRender[ui]}</Header>
 }
 
-export default RenderForm
+export default renderForm
