@@ -16,7 +16,7 @@ import { container, row, label, data } from './styles'
 // 	{ value: '011.445.667-09' , name: 'CPF' },
 // 	{ value: '1305678-9' , name: 'RG' },
 // 	{ value: 'f@gmail.com' , name: 'Email' },
-// 	{ value: 'Eucatur' , name: 'Transporte' },
+// 	{ value: 'Eucatur' , name: 'Transporte' }, <---- Remover?
 // 	{ value: '18/dez/18' , name: 'Última Compra' },
 // 	{ value: ['Karmani','Absolutti','Secia','Doce Flor','Donna Ritz'] , name: 'Top Marcas' }
 // ]

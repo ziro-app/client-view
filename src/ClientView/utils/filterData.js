@@ -14,7 +14,19 @@ const filterData = (reseller, data) => {
 			{ value: dataToShow[11], name: 'CPF' },
 			{ value: dataToShow[12], name: 'Email' }
 		]
-	return []
+	return [
+			{ value: '', name: 'Assessor' },
+			{ value: '', name: 'Nome' },
+			{ value: '', name: 'Localidade' },
+			{ value: '', name: 'Endereço' },
+			{ value: '', name: 'Bairro' },
+			{ value: '', name: 'CEP' },
+			{ value: '', name: 'CNPJ' },
+			{ value: '', name: 'IE' },
+			{ value: '', name: 'RG' },
+			{ value: '', name: 'CPF' },
+			{ value: '', name: 'Email' }
+	]
 }
 
 export default filterData
