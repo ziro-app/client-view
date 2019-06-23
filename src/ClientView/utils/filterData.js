@@ -1,5 +1,8 @@
+//{ value: '', name: 'Última Compra' }
+
 const filterData = (reseller, data) => {
 	const [ dataToShow ] = data.filter(value => value[0] === reseller)
+	
 	if (dataToShow && dataToShow.length)
 		return [
 			{ value: dataToShow[1], name: 'Assessor' },
@@ -12,7 +15,8 @@ const filterData = (reseller, data) => {
 			{ value: dataToShow[9], name: 'IE' },
 			{ value: dataToShow[10], name: 'RG' },
 			{ value: dataToShow[11], name: 'CPF' },
-			{ value: dataToShow[12], name: 'Email' }
+			{ value: dataToShow[12], name: 'Email' },
+			{ value: dataToShow[13], name: 'Transporte' }
 		]
 	return [
 			{ value: '', name: 'Assessor' },
@@ -25,7 +29,8 @@ const filterData = (reseller, data) => {
 			{ value: '', name: 'IE' },
 			{ value: '', name: 'RG' },
 			{ value: '', name: 'CPF' },
-			{ value: '', name: 'Email' }
+			{ value: '', name: 'Email' },
+			{ value: '', name: 'Transporte' }
 	]
 }
 
