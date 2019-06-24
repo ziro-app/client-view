@@ -19,9 +19,13 @@ const fetchFromSheet = async (get, cancelTokenSource) => {
 				return acc
 			return [...acc, result]
 	}, [])
-	const clientData = values.slice(1)
-	console.log(delivery)
-	console.log(clientData)
+	const partialData = values.slice(1).map(value => value.slice(0,13))
+	const clientData = partialData.map(value => {
+		const [ found ] = delivery.filter(options => options[0] === value[0])
+		if (found)
+			return [...value, found[1]]
+		return [...value, '']
+	})
 	return { resellers, clientData }
 }
 
