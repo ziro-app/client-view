@@ -1,8 +1,7 @@
 //{ value: '', name: 'Última Compra' }
 
 const filterData = (reseller, data) => {
-	const [ dataToShow ] = data.filter(value => value[0] === reseller)	
-	console.log(data)
+	const [ dataToShow ] = data.filter(value => value[0] !== '').filter(value => value[0] === reseller)
 	if (dataToShow && dataToShow.length)
 		return [
 			{ value: dataToShow[1], name: 'Assessor' },
