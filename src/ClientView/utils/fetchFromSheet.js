@@ -19,12 +19,14 @@ const fetchFromSheet = async (get, cancelTokenSource) => {
 				return acc
 			return [...acc, result]
 	}, [])
+	const lastBuy = values.slice(1).map(value => [value[0],value[15]]).filter(value => value[0] !== '')
 	const partialData = values.slice(1).map(value => value.slice(0,13))
 	const clientData = partialData.map(value => {
 		const [ found ] = delivery.filter(options => options[0] === value[0])
+		const [ foundLastBuy ] = lastBuy.filter(options => options[0] === value[0])
 		if (found)
-			return [...value, found[1]]
-		return [...value, '']
+			return [...value, found[1], foundLastBuy[1]]
+		return [...value, '', '']
 	})
 	return { resellers, clientData }
 }
