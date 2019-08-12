@@ -13,8 +13,9 @@ const filterData = (reseller, data) => {
 			{ value: dataToShow[10], name: 'RG' },
 			{ value: dataToShow[11], name: 'CPF' },
 			{ value: dataToShow[12], name: 'Email' },
-			{ value: dataToShow[13], name: 'Transporte' },
-			{ value: dataToShow[14], name: 'Última Compra' },
+			{ value: dataToShow[13], name: 'Fone' },
+			{ value: dataToShow[14], name: 'Transporte' },
+			{ value: dataToShow[15], name: 'Última Compra' },
 		]
 	return [
 			{ value: '', name: 'Assessor' },
@@ -28,6 +29,7 @@ const filterData = (reseller, data) => {
 			{ value: '', name: 'RG' },
 			{ value: '', name: 'CPF' },
 			{ value: '', name: 'Email' },
+			{ value: '', name: 'Fone' },
 			{ value: '', name: 'Transporte' },
 			{ value: '', name: 'Última Compra' },
 	]
